@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home.page';
 import { SlideBoxPage } from '../pages/slide-box/slide-box.page';
 import { PayPalPage } from '../pages/paypal/paypal.page';
 import { LoginPage } from '../pages/login/login';
+import { BillsPage } from '../pages/bills/bills';
 
 
 import { AuthService } from '../services/auth.service';
@@ -33,9 +34,9 @@ export class MyApp {
 		// set our app's pages
 		this.pages = [
 			{ title: 'Home', component: HomePage, icon: 'home' },
-			{ title: 'Slides', component: SlideBoxPage, icon: 'swap' },
-			{ title: 'Google maps', component: GoogleMapsPage, icon: 'map' },
-			{ title: 'Components', component: ComponentsListPage, icon: 'grid' },   { title: 'PayPal', component: PayPalPage, icon: 'cash' }
+			{ title: 'Bill Details', component: SlideBoxPage, icon: 'grid' },
+			{ title: 'Edit/Remove Bills', component: BillsPage, icon: 'cash' },
+			{ title: 'Components', component: ComponentsListPage, icon: 'warning' },   { title: 'PayPal', component: PayPalPage, icon: 'card' }
 		];
 	}
 

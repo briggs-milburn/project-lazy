@@ -3,7 +3,7 @@
 		<button ion-button menuToggle>
 			<ion-icon name="menu"></ion-icon>
 		</button>
-		<ion-title>ePence</ion-title>
+		<ion-title>eBurse</ion-title>
 	</ion-navbar>
 </ion-header>
 
@@ -12,12 +12,12 @@
 		<img src="http://lorempixel.com/g/640/480/technics" />
 
 		<div class="hello-title" text-wrap>
-			<h1>Pay Yo' Rent</h1>
+			<h1>Pay Yo` Rent</h1>
 			516 Ridgecrest Rd, Georgetown, Texas 78628, United States
 		</div>
 	</div>
 
-	<ion-row *ngFor="let tilePair of tiles">
+	<!--<ion-row *ngFor="let tilePair of tiles">
 		<ion-col *ngFor="let tile of tilePair">
 			<ion-card class="tile" (click)="navigateTo(tile)">
 				<ion-card-content>
@@ -28,7 +28,7 @@
 				</ion-card-content>
 			</ion-card>
 		</ion-col>
-	</ion-row>
+	</ion-row>-->
 
 	<ion-row>
 		<ion-card class="quick-action" (click)="callUs()">
@@ -49,20 +49,20 @@
       margin-bottom
       color="primary"
       (click)="addEntry()">
-      Add a technology
+      Add a Bill
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-item>
 
 
-  <ion-item *ngFor="let item of items">
+  <!--<ion-item *ngFor="let item of items">
     <h2>{{ item.name }} </h2>
     <button
       ion-button
       color="primary"
       item-right
       (click)="viewEntry({ record: item })">View</button>
-  </ion-item>
+  </ion-item>-->
 
 
 </ion-content>

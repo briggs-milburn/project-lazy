@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ pageTitle }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <div>
+    <ion-item *ngIf="isEdited && !hideForm">
+      <button
+        ion-button
+        item-right
+        color="secondary"
+        text-center
+        block
+        (click)="deleteEntry()">Remove this Entry?</button>
+    </ion-item>
+
+
+    <div *ngIf="hideForm">
+      <ion-item class="post-entry-message" text-wrap>
+        <h2>Success!</h2>
+        <p>Maybe you'd like to edit an existing entry or add a new record?</p>
+        <p>Simply go back to the home page and select the option you want to pursue.</p>
+      </ion-item>
+    </div>
+
+
+    <div *ngIf="!hideForm">
+      <form [formGroup]="form" (ngSubmit)="saveEntry()">
+
+        <ion-list>
+          <ion-item-group>
+            <ion-item-divider color="light">Bill Type *</ion-item-divider>
+            <ion-item>
+              <ion-input
+                type="text"
+                placeholder="Enter the Bill Type (Company)..."
+                formControlName="bill_type"
+                [(ngModel)]="financialBillType"></ion-input>
+            </ion-item>
+          </ion-item-group>
+
+          <ion-item-group>
+            <ion-item-divider color="light">Bill Year *</ion-item-divider>
+            <ion-item>
+              <ion-textarea
+                placeholder="Year..."
+                formControlName="year"
+                [(ngModel)]="financialYear"></ion-textarea>
+            </ion-item>
+          </ion-item-group>
+
+          <ion-item-group>
+          <ion-item-divider color="light">Bill Month *</ion-item-divider>
+          <ion-item>
+            <ion-textarea
+              placeholder="Month..."
+              formControlName="month"
+              [(ngModel)]="financialMonth"></ion-textarea>
+          </ion-item>
+        </ion-item-group>
+
+          <ion-item-group>
+            <ion-item-divider color="light">Bill Cost *</ion-item-divider>
+            <ion-item>
+              <ion-textarea
+                placeholder="Cost..."
+                formControlName="cost"
+                [(ngModel)]="financialCost"></ion-textarea>
+            </ion-item>
+          </ion-item-group>
+
+          <ion-item-group>
+            <ion-item-divider color="light">Bill Day Due *</ion-item-divider>
+            <ion-item>
+              <ion-textarea
+                placeholder="Day Due..."
+                formControlName="day_due"
+                [(ngModel)]="financialDayDue"></ion-textarea>
+            </ion-item>
+          </ion-item-group>
+
+          <ion-item-group>
+            <ion-item-divider color="light">Bill Frequency *</ion-item-divider>
+            <ion-item>
+              <ion-textarea
+                placeholder="Frequency..."
+                formControlName="frequency"
+                [(ngModel)]="financialFrequency"></ion-textarea>
+            </ion-item>
+          </ion-item-group>
+
+          <ion-item-group>
+            <ion-item-divider color="light">Bill Status *</ion-item-divider>
+            <ion-item>
+              <ion-textarea
+                placeholder="Status..."
+                formControlName="status"
+                [(ngModel)]="financialStatus"></ion-textarea>
+            </ion-item>
+          </ion-item-group>
+
+          <ion-item-group>
+            <ion-item-divider color="light">Bill Notes *</ion-item-divider>
+            <ion-item>
+              <ion-textarea
+                placeholder="Notes..."
+                formControlName="notes"
+                rows="4"
+                [(ngModel)]="financialNotes"></ion-textarea>
+            </ion-item>
+          </ion-item-group>
+
+
+          <ion-item>
+            <button
+              ion-button
+              color="primary"
+              text-center
+              block
+              [disabled]="!form.valid">Save Entry</button>
+          </ion-item>
+
+        </ion-list>
+
+      </form>
+    </div>
+  </div>
+
+
+</ion-content>

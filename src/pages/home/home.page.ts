@@ -88,7 +88,7 @@ export class HomePage {
    */
   addEntry() : void
   {
-    this.navCtrl.push('AddTechnologyPage');
+    this.navCtrl.push('FinancialPage');
   }
 
   /**

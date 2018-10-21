@@ -14,7 +14,9 @@ import { AddTechnologyPage } from '../pages/add-technology/add-technology';
 import { ComponentsModule } from '../pages/components/components.module';
 import { GoogleMapsModule } from '../pages/google-maps/google-maps.module';
 import { HomeModule } from '../pages/home/home.module';
+import { BillsModule } from '../pages/bills/bills.module';
 import { SlideBoxModule } from '../pages/slide-box/slide-box.module';
+import { FinancialModule } from '../pages/financial/financial.module';
 import { MyApp } from './app.component';
 import { PayPalModule } from '../pages/paypal/paypal.module';
 
@@ -41,11 +43,12 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
     AngularFireModule.initializeApp(firebaseConfig.fire),
 		ComponentsModule,
 		GoogleMapsModule,
+    FinancialModule,
 		HomeModule,
 		SlideBoxModule,
 		PayPalModule,
 		NgxErrorsModule,
-
+    BillsModule
 	],
 	bootstrap: [IonicApp],
 	entryComponents: [
