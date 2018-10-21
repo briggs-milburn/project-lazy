@@ -1,0 +1,68 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>ePence</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="getting-started">
+	<div class="home-hello">
+		<img src="http://lorempixel.com/g/640/480/technics" />
+
+		<div class="hello-title" text-wrap>
+			<h1>Pay Yo' Rent</h1>
+			516 Ridgecrest Rd, Georgetown, Texas 78628, United States
+		</div>
+	</div>
+
+	<ion-row *ngFor="let tilePair of tiles">
+		<ion-col *ngFor="let tile of tilePair">
+			<ion-card class="tile" (click)="navigateTo(tile)">
+				<ion-card-content>
+					<ion-item>
+						<h1><ion-icon [name]="tile.icon"></ion-icon></h1>
+						<h2>{{tile.title}}</h2>
+					</ion-item>
+				</ion-card-content>
+			</ion-card>
+		</ion-col>
+	</ion-row>
+
+	<ion-row>
+		<ion-card class="quick-action" (click)="callUs()">
+			<ion-card-content>
+				<ion-icon name="phone-portrait"></ion-icon>
+				<span>Call me</span>
+			</ion-card-content>
+		</ion-card>
+	</ion-row>
+
+
+  <ion-item>
+    <button
+      class="add"
+      ion-button
+      item-right
+      icon-right
+      margin-bottom
+      color="primary"
+      (click)="addEntry()">
+      Add a technology
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-item>
+
+
+  <ion-item *ngFor="let item of items">
+    <h2>{{ item.name }} </h2>
+    <button
+      ion-button
+      color="primary"
+      item-right
+      (click)="viewEntry({ record: item })">View</button>
+  </ion-item>
+
+
+</ion-content>
