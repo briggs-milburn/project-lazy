@@ -3,14 +3,16 @@
 		<button ion-button menuToggle>
 			<ion-icon name="menu"></ion-icon>
 		</button>
-		<ion-title>Slides</ion-title>
+		<ion-title>Bill Details</ion-title>
 	</ion-navbar>
 </ion-header>
 
 <ion-content>
 	<ion-slides pager loop="true">
 		<ion-slide *ngFor="let item of items">
-			<img src="{{item.image}}" />
+      <h1>{{ item.bill_type }}</h1>
+      <h2> Bill Item Cost: </h2>
+      <h3>$ {{ item.cost }}</h3>
 		</ion-slide>
 	</ion-slides>
 </ion-content>

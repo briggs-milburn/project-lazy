@@ -35,51 +35,71 @@
           <ion-item-group>
             <ion-item-divider color="light">Bill Type *</ion-item-divider>
             <ion-item>
-              <ion-input
-                type="text"
-                placeholder="Enter the Bill Type (Company)..."
+              <ion-select
+                placeholder="Choose the Bill Type (Company)..."
                 formControlName="bill_type"
-                [(ngModel)]="financialBillType"></ion-input>
+                [(ngModel)]="financialBillType">
+                <ion-option>Rent</ion-option>
+                <ion-option>Water/Gas/Electricity</ion-option>
+                <ion-option>Tv/Internet/Phone</ion-option>
+                <ion-option>Other</ion-option>
+              </ion-select>
             </ion-item>
           </ion-item-group>
 
           <ion-item-group>
             <ion-item-divider color="light">Bill Year *</ion-item-divider>
             <ion-item>
-              <ion-textarea
-                placeholder="Year..."
+              <ion-input
+                placeholder="2018"
+                type="number"
                 formControlName="year"
-                [(ngModel)]="financialYear"></ion-textarea>
+                [(ngModel)]="financialYear"></ion-input>
             </ion-item>
           </ion-item-group>
 
           <ion-item-group>
           <ion-item-divider color="light">Bill Month *</ion-item-divider>
           <ion-item>
-            <ion-textarea
+            <ion-select
               placeholder="Month..."
               formControlName="month"
-              [(ngModel)]="financialMonth"></ion-textarea>
+              [(ngModel)]="financialMonth">
+              <ion-option value="01">January</ion-option>
+              <ion-option value="02">February</ion-option>
+              <ion-option value="03">March</ion-option>
+              <ion-option value="04">April</ion-option>
+              <ion-option value="05">May</ion-option>
+              <ion-option value="06">June</ion-option>
+              <ion-option value="07">July</ion-option>
+              <ion-option value="08">August</ion-option>
+              <ion-option value="09">September</ion-option>
+              <ion-option value="10">October</ion-option>
+              <ion-option value="11">November</ion-option>
+              <ion-option value="12">December</ion-option>
+            </ion-select>
           </ion-item>
         </ion-item-group>
 
           <ion-item-group>
             <ion-item-divider color="light">Bill Cost *</ion-item-divider>
             <ion-item>
-              <ion-textarea
-                placeholder="Cost..."
+              <ion-input
+                type="string"
+                placeholder="000.00"
                 formControlName="cost"
-                [(ngModel)]="financialCost"></ion-textarea>
+                [(ngModel)]="financialCost"></ion-input>
             </ion-item>
           </ion-item-group>
 
           <ion-item-group>
             <ion-item-divider color="light">Bill Day Due *</ion-item-divider>
             <ion-item>
-              <ion-textarea
-                placeholder="Day Due..."
+              <ion-input
+                type="number"
+                placeholder="15"
                 formControlName="day_due"
-                [(ngModel)]="financialDayDue"></ion-textarea>
+                [(ngModel)]="financialDayDue"></ion-input>
             </ion-item>
           </ion-item-group>
 
@@ -96,15 +116,20 @@
           <ion-item-group>
             <ion-item-divider color="light">Bill Status *</ion-item-divider>
             <ion-item>
-              <ion-textarea
+              <ion-select
                 placeholder="Status..."
                 formControlName="status"
-                [(ngModel)]="financialStatus"></ion-textarea>
+                [(ngModel)]="financialStatus">
+                <ion-option value="Unpaid">Unpaid</ion-option>
+                <ion-option value="Paid">Paid</ion-option>
+                <ion-option value="Reimbursred - Complete">Reimbursred - Complete</ion-option>
+                <ion-option value="Check Notes">Check Notes</ion-option>
+              </ion-select>
             </ion-item>
           </ion-item-group>
 
           <ion-item-group>
-            <ion-item-divider color="light">Bill Notes *</ion-item-divider>
+            <ion-item-divider color="light">Bill Notes</ion-item-divider>
             <ion-item>
               <ion-textarea
                 placeholder="Notes..."

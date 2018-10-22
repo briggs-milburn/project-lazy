@@ -158,9 +158,13 @@ export class FinancialPage {
       "day_due"                  : ["", Validators.required],
       "frequency"                  : ["", Validators.required],
       "status"                  : ["", Validators.required],
-      "notes"                  : ["", Validators.required]
+      "notes"                  : [""]
     });
+
+
   }
+
+
 
 
 

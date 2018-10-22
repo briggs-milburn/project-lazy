@@ -36,7 +36,7 @@ export class MyApp {
 			{ title: 'Home', component: HomePage, icon: 'home' },
 			{ title: 'Bill Details', component: SlideBoxPage, icon: 'grid' },
 			{ title: 'Edit/Remove Bills', component: BillsPage, icon: 'cash' },
-			{ title: 'Components', component: ComponentsListPage, icon: 'warning' },   { title: 'PayPal', component: PayPalPage, icon: 'card' }
+			//{ title: 'Components', component: ComponentsListPage, icon: 'warning' },   { title: 'PayPal', component: PayPalPage, icon: 'card' }
 		];
 	}
 

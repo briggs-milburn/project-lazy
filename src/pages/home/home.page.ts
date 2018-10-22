@@ -126,17 +126,16 @@ export class HomePage {
 		this.callService.call(data.phoneNumber);
 	}
 
+	public openDetails() {
+    this.navCtrl.setRoot('SlideBoxPage')
+  }
+
 	private initTiles(): void {
 		this.tiles = [[{
-			title: 'Slides',
+			title: 'Current Bill Details',
 			path: 'slides',
-			icon: 'swap',
+			icon: 'grid',
 			component: SlideBoxPage
-		}], [{
-			title: 'Map',
-			path: 'map',
-			icon: 'map',
-			component: GoogleMapsPage
 		}]];
 	}
 }
